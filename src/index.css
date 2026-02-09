@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Force Block Display */
+wokwi-arduino-uno, wokwi-breadboard, wokwi-led, wokwi-pushbutton, wokwi-resistor {
+  display: block; 
+}
+
+/* Explicit size for Breadboard */
+wokwi-breadboard {
+  min-width: 500px;
+  min-height: 180px;
+  background: transparent; /* Ensure it doesn't have a weird background */
+}
+
+/* Grid Backgrounds */
+.canvas-grid-light {
+  background-color: #f8fafc;
+  background-image: linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.canvas-grid-dark {
+  background-color: #0f172a;
+  background-image: linear-gradient(#1e293b 1px, transparent 1px), linear-gradient(90deg, #1e293b 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.sidebar-panel {
+  @apply bg-white dark:bg-slate-800 border-r border-slate-200 dark:border-slate-700 shadow-xl z-20 transition-colors duration-300;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
